@@ -6,7 +6,6 @@ const navigation = [
   { name: "หน้าแรก", href: "#", current: true },
   { name: "ค้นหาแมว", href: "#", current: false },
   { name: "แมวของฉัน", href: "#", current: false },
-  { name: "สำหรับมูลนิธิ", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -53,7 +52,7 @@ export default function Example() {
                         className={classNames(
                           item.current
                             ? "bg-salmon text-white"
-                            : "text-zinc-400 hover:bg-light-salmon hover:text-white",
+                            : "text-zinc-400 hover:bg-light-salmon hover:text-zinc-800",
                           "px-3 py-2 rounded-md text-sm font-extralight"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -63,7 +62,25 @@ export default function Example() {
                     ))}
                   </div>
                 </div>
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
+                      <a
+                        key="สำหรับมูลนิธิ"
+                        href="#"
+                        className={classNames(
+                          false
+                            ? "bg-salmon text-white"
+                            : "text-iris hover:bg-light-salmon hover:text-zinc-800",
+                          "px-3 py-2 rounded-md text-sm font-extralight"
+                        )}
+                        aria-current={false ? "page" : undefined}
+                      >
+                        สำหรับมูลนิธิ
+                      </a>
+                  </div>
+                </div>
               </div>
+              
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"

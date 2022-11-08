@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "salmon": "#FA8072",
         "light-salmon": "#FDEFED",
+        "iris": "#5D5FEF",
       },
     },
   },
